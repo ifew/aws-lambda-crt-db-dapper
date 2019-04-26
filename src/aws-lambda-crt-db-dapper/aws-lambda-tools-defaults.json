@@ -6,7 +6,7 @@
   "profile":"default",
   "region" : "ap-southeast-1",
   "configuration" : "Release",
-  "framework" : "provided",
+  "framework" : "netcoreapp2.2",
   "function-runtime":"provided",
   "function-memory-size" : 256,
   "function-timeout" : 30,
