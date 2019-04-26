@@ -18,7 +18,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
-    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="Dapper" Version="1.60.9" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0-preview4.19212.13" />
     <PackageReference Include="MySql.Data" Version="8.0.15" />
   </ItemGroup>
 </Project>

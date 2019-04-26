@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace aws_lambda_crt_db
+namespace aws_lambda_crt_db_dapper
 {
     [Table("district")]
     public class DistrictModel

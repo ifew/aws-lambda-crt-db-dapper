@@ -9,7 +9,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace aws_lambda_crt_db
+namespace aws_lambda_crt_db_dapper
 {
     public class Function
     {
@@ -29,12 +29,20 @@ namespace aws_lambda_crt_db
         {
             using (MySqlConnection _connection = new MySqlConnection(LambdaConfiguration.Instance["DB_CONNECTION"].ToString()))  
             {  
+                context.Logger.LogLine("_connection.ConnectionString: " + _connection.ConnectionString);
+                context.Logger.LogLine("_connection.ToString: " + _connection.ToString());
+                context.Logger.LogLine("_connection.ServerThread: " + _connection.ServerThread);
+                context.Logger.LogLine("ServerVersion Before Open: " + _connection.ServerVersion + "\nState: " + _connection.State.ToString());
+
+
                 if (_connection.State == ConnectionState.Closed)  
                     _connection.Open();  
-  
+                
+                context.Logger.LogLine("ServerVersion After Open: " + _connection.ServerVersion + "\nState: " + _connection.State.ToString());
+
                 string sqlQuery = "SELECT * FROM district";
                 var result = await _connection.QueryAsync<DistrictModel>(sqlQuery);
-
+                
                 return result.ToList();  
             } 
         }

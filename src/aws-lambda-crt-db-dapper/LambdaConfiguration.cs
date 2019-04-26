@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace aws_lambda_crt_db
+namespace aws_lambda_crt_db_dapper
 {
     public static class LambdaConfiguration
     {
