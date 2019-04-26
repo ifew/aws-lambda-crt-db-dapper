@@ -1,0 +1,16 @@
+﻿{
+  "Information" : [    
+    "Try custom runtime"
+  ],
+
+  "profile":"default",
+  "region" : "ap-southeast-1",
+  "configuration" : "Release",
+  "framework" : "netcoreapp2.2",
+  "function-runtime":"provided",
+  "function-memory-size" : 256,
+  "function-timeout" : 30,
+  "function-handler" : "provided",
+  "function-name" : "aws-lambda-crt-db",
+  "msbuild-parameters": "--self-contained true"
+  }
