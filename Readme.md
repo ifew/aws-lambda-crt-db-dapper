@@ -1,20 +1,20 @@
-# aws-lambda-crt-example
+# Example AWS Lambda C# .NET Core 2.2 though Custom Runtime (Amazon.Lambda.RuntimeSupport) with connect MySQL and Dapper
 
-Example C# though Custom Runtime (.Net Core 2.2) working with AWS Lambda Function and MySQL
+Example for optimize cold start with Amazon.Lambda.RuntimeSupport
 
 ## This code to show about
-- Example custom runtime
+- Example code for using Amazon.Lambda.RuntimeSupport and connect MySQL and Dapper
 
 ## Test and Deploy with AWS CLI
 
 **Deploy**
 ```
-$ cd src/aws-lambda-crt-example
+$ cd src/aws-lambda-crt-db
 $ dotnet lambda deploy-function {LAMBDA_FUNCTION_NAME} –-function-role {ROLE_NAME}
 ```
 
 **Try to Run and Get result**
 ```
-$ cd src/aws-lambda-crt-example
+$ cd src/aws-lambda-crt-db
 $ aws lambda invoke --function-name {LAMBDA_FUNCTION_NAME} output.txt
 ```
